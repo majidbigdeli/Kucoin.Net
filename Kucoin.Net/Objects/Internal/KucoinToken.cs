@@ -4,14 +4,14 @@ using Newtonsoft.Json;
 
 namespace Kucoin.Net.Objects.Internal
 {
-    internal class KucoinToken
+    public class KucoinToken
     {
         public string Token { get; set; } = string.Empty;
         [JsonProperty("instanceServers")]
         public IEnumerable<KucoinInstanceServer> Servers { get; set; } = Array.Empty<KucoinInstanceServer>();
     }
 
-    internal class KucoinInstanceServer
+    public class KucoinInstanceServer
     {
         public int PingInterval { get; set; }
         public string Endpoint { get; set; } = string.Empty;

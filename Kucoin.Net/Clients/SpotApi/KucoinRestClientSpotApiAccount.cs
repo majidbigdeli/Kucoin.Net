@@ -372,13 +372,13 @@ namespace Kucoin.Net.Clients.SpotApi
             return await _baseClient.SendAsync<KucoinApiKey>(request, parameters, ct).ConfigureAwait(false);
         }
 
-        internal async Task<WebCallResult<KucoinToken>> GetWebsocketTokenPublicAsync(CancellationToken ct = default)
+        public async Task<WebCallResult<KucoinToken>> GetWebsocketTokenPublicAsync(CancellationToken ct = default)
         {
             var request = _definitions.GetOrCreate(HttpMethod.Post, $"api/v1/bullet-public", KucoinExchange.RateLimiter.PublicRest, 10, false);
             return await _baseClient.SendAsync<KucoinToken>(request, null, ct).ConfigureAwait(false);
         }
 
-        internal async Task<WebCallResult<KucoinToken>> GetWebsocketTokenPrivateAsync(CancellationToken ct = default)
+        public async Task<WebCallResult<KucoinToken>> GetWebsocketTokenPrivateAsync(CancellationToken ct = default)
         {
             var request = _definitions.GetOrCreate(HttpMethod.Post, $"api/v1/bullet-private", KucoinExchange.RateLimiter.SpotRest, 10, true);
             return await _baseClient.SendAsync<KucoinToken>(request, null, ct).ConfigureAwait(false);

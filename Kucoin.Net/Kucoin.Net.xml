@@ -382,6 +382,14 @@
             <param name="optionsDelegate">Option configuration delegate</param>
             <param name="loggerFactory">The logger factory</param>
         </member>
+        <member name="M:Kucoin.Net.Clients.KucoinSocketClient.#ctor(System.Action{Kucoin.Net.Objects.Options.KucoinSocketOptions},System.Func{Microsoft.Extensions.Logging.ILogger,Kucoin.Net.Clients.KucoinSocketClient,Kucoin.Net.Objects.Options.KucoinSocketOptions,Kucoin.Net.Clients.SpotApi.KucoinSocketClientSpotApi},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a new instance of KucoinSocketClient
+            </summary>
+            <param name="optionsDelegate">Option configuration delegate</param>
+            <param name="getKucoinSocketClientSpotApi">Option configuration delegate</param>
+            <param name="loggerFactory">The logger factory</param>
+        </member>
         <member name="M:Kucoin.Net.Clients.KucoinSocketClient.SetDefaultOptions(System.Action{Kucoin.Net.Objects.Options.KucoinSocketOptions})">
             <summary>
             Set the default options to be used when creating new clients
