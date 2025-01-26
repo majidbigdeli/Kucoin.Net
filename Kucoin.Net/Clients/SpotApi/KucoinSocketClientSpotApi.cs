@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 namespace Kucoin.Net.Clients.SpotApi
 {
     /// <inheritdoc cref="IKucoinSocketClientSpotApi" />
-    internal partial class KucoinSocketClientSpotApi : SocketApiClient, IKucoinSocketClientSpotApi
+    public partial class KucoinSocketClientSpotApi : SocketApiClient, IKucoinSocketClientSpotApi
     {
         private readonly KucoinSocketClient _baseClient;
         private static readonly MessagePath _idPath = MessagePath.Get().Property("id");
@@ -42,7 +42,7 @@ namespace Kucoin.Net.Clients.SpotApi
         /// <inheritdoc />
         public new KucoinSocketOptions ClientOptions => (KucoinSocketOptions)base.ClientOptions;
 
-        internal KucoinSocketClientSpotApi(ILogger logger, KucoinSocketClient baseClient, KucoinSocketOptions options)
+        public KucoinSocketClientSpotApi(ILogger logger, KucoinSocketClient baseClient, KucoinSocketOptions options)
             : base(logger, options.Environment.SpotAddress, options, options.SpotOptions)
         {
             _baseClient = baseClient;

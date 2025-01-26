@@ -7,8 +7,8 @@
   <PropertyGroup>
 	  <PackageId>Septa.Kucoin.Net</PackageId>
 	  <Authors>majidbigdeli</Authors>
-    <PackageVersion>5.18.0</PackageVersion>
-    <AssemblyVersion>5.18.0</AssemblyVersion>
+    <PackageVersion>5.18.1</PackageVersion>
+    <AssemblyVersion>5.18.1</AssemblyVersion>
     <FileVersion>5.18.0</FileVersion>
     <Description>Kucoin.Net is a .Net wrapper for the Kucoin API. It includes all features the API provides, REST API and Websocket, using clear and readable objects including but not limited to Reading market info, Placing and managing orders and Reading balances and funds</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

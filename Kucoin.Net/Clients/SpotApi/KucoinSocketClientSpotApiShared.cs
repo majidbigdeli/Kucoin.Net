@@ -11,7 +11,7 @@ using Kucoin.Net.Enums;
 
 namespace Kucoin.Net.Clients.SpotApi
 {
-    internal partial class KucoinSocketClientSpotApi : IKucoinSocketClientSpotApiShared
+    public partial class KucoinSocketClientSpotApi : IKucoinSocketClientSpotApiShared
     {
         public string Exchange => KucoinExchange.ExchangeName;
         public TradingMode[] SupportedTradingModes { get; } = new[] { TradingMode.Spot };
